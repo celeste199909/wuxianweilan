@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card-image rounded-xl overflow-hidden">
-      <img src="../iamges/icons-preview.png" alt="" srcset="" />
+      <img src="../iamges/icons-preview.jpg" alt="" srcset="" />
     </div>
     <p class="card-title">应用统一图标</p>
     <p class="card-body">
