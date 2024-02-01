@@ -1,0 +1,2 @@
+const iconImageNames: string[] = ["360安全卫士","Anaconda","Apifox","Blender","Canva","DeepL","DevEco Studio","Dropbox","Everything","Facebook","Firefox 火狐浏览器","flomo","Git Bash","Gmail","Google Chrome","Instagram","Microsoft Edge","Microsoft Excel","Microsoft PowerPoint","Microsoft Word","MuMu模拟器","OBS Studio","Photoshop","Pinterest","QQ音乐","Scratch","Slack","Steam","uTools","Visual Studio Code","WPS Office","Xmind","YouTube","企业微信","剪映","墨刀","幕布","微信","微信开发者工具","微信输入法","必剪","网易UU加速器","网易云音乐","腾讯会议","虎牙直播","语雀","酷狗音乐","金山文档","钉钉","阿里云盘"];
+export default iconImageNames;

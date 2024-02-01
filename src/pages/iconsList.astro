@@ -1,0 +1,23 @@
+---
+import iconNames from "../data/allIcons.ts";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="图标清单">
+  <div
+    class="overflow-hidden w-screen h-screen flex flex-col "
+  >
+    <div class="text-blue-500 font-bold text-xl p-6">共{iconNames.length}个图标</div>
+    <div
+      class="h-full w-full icons-wrapper p-6 flex flex-col gap-1 overflow-y-scroll"
+    >
+      {
+        iconNames.map((name) => {
+          return <div>{name}</div>;
+        })
+      }
+    </div>
+  </div>
+</Layout>
+
+<style></style>

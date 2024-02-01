@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import iconImageNames from "../data/iconImagesInfo.ts";
+import Layout from "../layouts/Layout.astro";
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/*.{jpeg,jpg,png,gif}"
+);
+---
+<Layout title="图标预览">
+  <div class="icons-gallery w-screen h-screen flex justify-center items-center relative">
+    <div class="absolute top-10 left-20">
+      <a href="/">
+        <div class=" text-white ">返回主页</div>
+      </a>
+      <a href="/iconsList" target="_blank">
+        <div class=" text-white ">清单</div>
+      </a>
+      <a href="https://afdian.net/a/wuxianweilan" target="_blank">
+        <div class=" text-white ">获取图标</div>
+      </a>
+    </div>
+    <div class="icons-wrapper p-6">
+      {
+        iconImageNames.map((imageName) => {
+          return (
+            <div class="icon w-16 h-16 rounded-xl overflow-hidden select-none">
+              <Image
+                class={"select-none"}
+                src={images[`/src/assets/${imageName}.png`]()}
+                alt={imageName}
+                title={imageName}
+              />
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</Layout>
+
+
+<style>
+  .icons-gallery {
+    /* 从中心向四周的渐变背景 */
+    background: radial-gradient(circle, rgb(62, 62, 62), rgb(0, 0, 0));
+    overflow: hidden;
+  }
+  .icons-wrapper {
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 30px;
+    height: 490px;
+  }
+</style>
